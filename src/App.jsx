@@ -7,6 +7,7 @@ import Favourites from "./pages/Favourites";
 import FavouriteShows from "./pages/FavouriteShows";
 import FavouriteEpisodes from "./pages/FavouriteEpisodes";
 import { ShowProvider } from "./contexts/ShowContext";
+import Show from "./pages/Show";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <div className="container-800">
           <Routes>
             <Route index element={<Home />} />
+            <Route path="show/:id" element={<Show />} />
             <Route path="favourites">
               <Route index element={<Favourites />} />
               <Route path="shows" element={<FavouriteShows />} />

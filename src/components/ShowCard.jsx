@@ -1,6 +1,7 @@
 import defaultShowImg from "../assets/default-show-image.png";
 import DOMPurify from "dompurify";
 import { useShowContext } from "../contexts/ShowContext";
+import { Link } from "react-router";
 
 const SubHeading = ({ data }) => {
   const network = data.network ? data.network.name : data.webChannel.name;
@@ -24,23 +25,30 @@ const ShowCard = ({ data }) => {
       <div class="card p-2 text-bg-light">
         <div className="row">
           <div className="col-auto">
-            {data.image ? (
-              <img
-                src={data.image.medium}
-                class="show-img"
-                alt={`${data.name} poster`}
-              />
-            ) : (
-              <img
-                src={defaultShowImg}
-                class="show-img"
-                alt={`${data.name} poster`}
-              />
-            )}
+            <Link to={`/show/${data.id}`}>
+              {data.image ? (
+                <img
+                  src={data.image.medium}
+                  class="show-card-img"
+                  alt={`${data.name} poster`}
+                />
+              ) : (
+                <img
+                  src={defaultShowImg}
+                  class="show-card-img"
+                  alt={`${data.name} poster`}
+                />
+              )}
+            </Link>
           </div>
           <div className="col">
             <span className="show-name">
-              <strong>{data.name}</strong>{" "}
+              <Link
+                to={`/show/${data.id}`}
+                className="text-decoration-none text-reset"
+              >
+                <strong>{data.name}</strong>
+              </Link>{" "}
               <i
                 className={isLiked ? "bi bi-heart-fill" : "bi bi-heart"}
                 onClick={onLikeUnlike}

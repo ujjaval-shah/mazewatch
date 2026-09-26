@@ -5,11 +5,25 @@
   margin-right: auto;
 }
 
+#navbarNav {
+  font-size: large;
+}
+
 .count {
   text-align: center;
 }
 
+.show-card-img {
+  max-height: 200px;
+  width: auto;
+}
+
 .show-img {
+  max-width: 200px;
+  height: auto;
+}
+
+.person-img {
   max-height: 200px;
   width: auto;
 }
