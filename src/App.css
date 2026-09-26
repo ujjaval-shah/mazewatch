@@ -1,0 +1,19 @@
+.container-800 {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.count {
+  text-align: center;
+}
+
+.show-img {
+  max-height: 200px;
+  width: auto;
+}
+
+.card .show-name {
+  font-size: larger;
+}
