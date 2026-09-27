@@ -26,9 +26,19 @@ export const ShowProvider = ({ children }) => {
     return likedShows.some((show) => show.id === show_id);
   };
 
+  const isALikedEpisode = (episode_id) => {
+    return likedEpisodes.some((episode) => episode.id == episode_id);
+  };
+
   const likeAShow = (show_data) => {
     if (!isALikedShow(show_data.id)) {
       setLikedShows((prev) => [show_data, ...prev]);
+    }
+  };
+
+  const likeAnEpisode = (episode_data) => {
+    if (!isALikedEpisode(episode_data.id)) {
+      setLikedEpisodes((prev) => [episode_data, ...prev]);
     }
   };
 
@@ -36,11 +46,21 @@ export const ShowProvider = ({ children }) => {
     setLikedShows((prev) => prev.filter((show) => show.id !== show_id));
   };
 
+  const unlikeAnEpisode = (episode_id) => {
+    setLikedEpisodes((prev) =>
+      prev.filter((episode) => episode.id !== episode_id),
+    );
+  };
+
   const value = {
     likedShows,
     isALikedShow,
     likeAShow,
     unlikeAShow,
+    likedEpisodes,
+    isALikedEpisode,
+    likeAnEpisode,
+    unlikeAnEpisode,
   };
 
   return <ShowContext value={value}>{children}</ShowContext>;

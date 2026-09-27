@@ -12,6 +12,12 @@ const FavouriteShows = () => {
 
       <div className="mt-4">
         <ShowsList shows={likedShows} displayCount={false} />
+
+        {likedShows.length === 0 && (
+          <div className="text-center">
+            The shows that you like will appear here.
+          </div>
+        )}
       </div>
     </>
   );

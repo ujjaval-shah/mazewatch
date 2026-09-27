@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { get_season_episodes } from "../api/Apis";
 import LoadingSpinner from "./LoadingSpinner";
 import FailedToFetchData from "./FailedToFetchData";
+import EpisodesList from "./EpisodesList";
 
 const Season = ({ seasonId }) => {
   const [episodes, setEpisodes] = useState([]);
@@ -28,9 +29,11 @@ const Season = ({ seasonId }) => {
 
       {requestFailed && <FailedToFetchData />}
 
-      {episodes.map((ep) => (
-        <div>{ep.name}</div>
-      ))}
+      <EpisodesList
+        episodes={episodes}
+        nameLargeFonts={false}
+        displayShowDetails={false}
+      />
     </>
   );
 };
