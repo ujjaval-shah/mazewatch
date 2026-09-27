@@ -31,11 +31,15 @@ const Cast = ({ castDataItem }) => {
 const CastTab = ({ data }) => {
   return (
     <div className="mt-4">
-      <div class="row row-cols-2">
-        {data.map((item) => (
-          <Cast castDataItem={item} />
-        ))}
-      </div>
+      {data.length > 0 ? (
+        <div class="row row-cols-2">
+          {data.map((item) => (
+            <Cast castDataItem={item} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center"> (Cast information not available) </div>
+      )}
     </div>
   );
 };

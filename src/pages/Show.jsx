@@ -130,11 +130,15 @@ const Show = () => {
                 <strong> Show Type: </strong> {showData.type}
                 <br />
                 <strong> Summary: </strong>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(showData.summary),
-                  }}
-                />
+                {showData.summary ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(showData.summary),
+                    }}
+                  />
+                ) : (
+                  "(Summary not available)"
+                )}
               </div>
             </div>
           </div>
