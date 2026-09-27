@@ -22,20 +22,20 @@ const ShowCard = ({ data }) => {
 
   return (
     <div className="mb-3">
-      <div class="card p-2 text-bg-light">
+      <div className="card p-2 text-bg-light">
         <div className="row">
           <div className="col-auto">
             <Link to={`/show/${data.id}`}>
               {data.image ? (
                 <img
                   src={data.image.medium}
-                  class="show-card-img"
+                  className="show-card-img"
                   alt={`${data.name} poster`}
                 />
               ) : (
                 <img
                   src={defaultShowImg}
-                  class="show-card-img"
+                  className="show-card-img"
                   alt={`${data.name} poster`}
                 />
               )}

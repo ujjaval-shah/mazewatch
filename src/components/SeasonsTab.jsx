@@ -8,9 +8,10 @@ const SeasonsTab = ({ data }) => {
     <div className="mt-4">
       <div className="row">
         <div className="col-auto">
-          <ul class="list-group">
+          <ul className="list-group">
             {data.map((item) => (
               <li
+                key={item.number}
                 className={
                   item.number === activeSeason.number
                     ? "list-group-item active"

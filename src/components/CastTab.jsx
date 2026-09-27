@@ -14,9 +14,13 @@ const Cast = ({ castDataItem }) => {
       <div className="row g-0">
         <div className="col-auto">
           {imgSrc ? (
-            <img src={imgSrc} class="person-img" alt={person.name} />
+            <img src={imgSrc} className="person-img" alt={person.name} />
           ) : (
-            <img src={defaultPersonImg} class="person-img" alt={person.name} />
+            <img
+              src={defaultPersonImg}
+              className="person-img"
+              alt={person.name}
+            />
           )}
         </div>
         <div className="col ps-2">
@@ -32,9 +36,9 @@ const CastTab = ({ data }) => {
   return (
     <div className="mt-4">
       {data.length > 0 ? (
-        <div class="row row-cols-2">
+        <div className="row row-cols-2">
           {data.map((item) => (
-            <Cast castDataItem={item} />
+            <Cast key={item.person.id} castDataItem={item} />
           ))}
         </div>
       ) : (

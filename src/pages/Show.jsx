@@ -82,13 +82,13 @@ const Show = () => {
                 {showData.image ? (
                   <img
                     src={showData.image.medium}
-                    class="show-img"
+                    className="show-img"
                     alt={`${showData.name} poster`}
                   />
                 ) : (
                   <img
                     src={defaultShowImg}
-                    class="show-img"
+                    className="show-img"
                     alt={`${showData.name} poster`}
                   />
                 )}
@@ -144,8 +144,8 @@ const Show = () => {
           </div>
 
           <div className="mt-4">
-            <ul class="nav nav-underline justify-content-center">
-              <li class="nav-item" onClick={() => setActiveTab("cast")}>
+            <ul className="nav nav-underline justify-content-center">
+              <li className="nav-item" onClick={() => setActiveTab("cast")}>
                 <a
                   className={
                     activeTab === "cast" ? "nav-link active" : "nav-link"
@@ -155,7 +155,7 @@ const Show = () => {
                   Cast
                 </a>
               </li>
-              <li class="nav-item" onClick={() => setActiveTab("seasons")}>
+              <li className="nav-item" onClick={() => setActiveTab("seasons")}>
                 <a
                   className={
                     activeTab === "seasons" ? "nav-link active" : "nav-link"

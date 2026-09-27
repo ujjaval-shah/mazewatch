@@ -5,6 +5,7 @@ const EpisodesList = ({ episodes, nameLargeFonts, displayShowDetails }) => {
     <>
       {episodes.map((episodeData) => (
         <EpisodeCard
+          key={episodeData.id}
           episodeData={episodeData}
           nameLargeFonts={nameLargeFonts}
           displayShowDetails={displayShowDetails}

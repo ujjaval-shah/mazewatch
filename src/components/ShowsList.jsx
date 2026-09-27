@@ -9,7 +9,7 @@ const ShowsList = ({ shows, displayCount }) => {
 
       <div className="mt-4">
         {shows.map((show_data) => (
-          <ShowCard data={show_data} />
+          <ShowCard key={show_data.id} data={show_data} />
         ))}
       </div>
     </>
