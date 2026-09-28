@@ -12,10 +12,10 @@ const About = () => {
 
       <div className="mt-4 text-center">
         <strong>MazeWatch</strong> is a React-based web application that allows
-        users to search, and track their favorite TV shows and episodes using
-        the TVMaze API. Users can save their favorite content to custom
-        Favourite Shows and Favourite Episodes lists, which are saved locally in
-        the browser using LocalStorage, no account or login required.
+        users to search and track their favorite TV shows and episodes using the
+        TVMaze API. Users can save their favorite content to custom Favourite
+        Shows and Favourite Episodes lists, which are saved locally in the
+        browser using LocalStorage; no account or login required.
         <br />
         <br />
         Made with React and React Router. Stylized with Bootstrap.
