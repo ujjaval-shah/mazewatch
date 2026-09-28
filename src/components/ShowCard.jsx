@@ -62,11 +62,18 @@ const ShowCard = ({ data }) => {
             <br />
             <SubHeading data={data} />
             <br />
-            <strong> Rating: </strong>{" "}
-            {data.rating.average ? data.rating.average : "(Not enough votes)"}
-            <br />
-            <strong> Genre: </strong> {data.genres.join(", ")}
-            <br />
+            {data.rating.average && (
+              <>
+                <strong> Rating: </strong> {data.rating.average}
+                <br />
+              </>
+            )}
+            {data.genres.length > 0 && (
+              <>
+                <strong> Genre: </strong> {data.genres.join(", ")}
+                <br />
+              </>
+            )}
             <div
               dangerouslySetInnerHTML={{
                 __html: DOMPurify.sanitize(data.summary),
