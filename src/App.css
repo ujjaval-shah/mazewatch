@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 .container-800 {
   max-width: 800px;
   width: 100%;
@@ -6,7 +8,12 @@
 }
 
 #navbarNav {
-  font-size: large;
+  font-size: larger;
+  font-family: "Kanit", sans-serif;
+}
+
+.page-heading {
+  font-family: "Kanit", sans-serif;
 }
 
 .count {

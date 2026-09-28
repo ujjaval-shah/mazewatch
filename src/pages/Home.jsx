@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="mt-4 text-center">
+      <div className="mt-4 text-center page-heading">
         <h2> Home </h2>
       </div>
 

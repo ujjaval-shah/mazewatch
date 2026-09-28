@@ -6,7 +6,7 @@ const FavouriteShows = () => {
 
   return (
     <>
-      <div className="mt-4 text-center">
+      <div className="mt-4 text-center page-heading">
         <h2> Favourite Shows </h2>
       </div>
 

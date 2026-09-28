@@ -66,7 +66,7 @@ const Show = () => {
 
       {showData && (
         <>
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-center page-heading">
             <h2>
               {showData.name}{" "}
               <i
