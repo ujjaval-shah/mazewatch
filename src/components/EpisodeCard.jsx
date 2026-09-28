@@ -45,6 +45,7 @@ const EpisodeCard = ({ episodeData, nameLargeFonts, displayShowDetails }) => {
           <span className={nameLargeFonts ? "episode-name" : ""}>
             <strong>{name}</strong>{" "}
             <i
+              title={isLiked ? "Remove from Favourites" : "Add to Favourites"}
               className={isLiked ? "bi bi-heart-fill" : "bi bi-heart"}
               onClick={onLikeUnlike}
             />

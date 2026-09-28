@@ -76,6 +76,7 @@ const Show = () => {
             <h2>
               {showData.name}{" "}
               <i
+                title={isLiked ? "Remove from Favourites" : "Add to Favourites"}
                 className={isLiked ? "bi bi-heart-fill" : "bi bi-heart"}
                 onClick={onLikeUnlike}
               />{" "}

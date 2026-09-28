@@ -55,6 +55,7 @@ const ShowCard = ({ data }) => {
                 <strong>{data.name}</strong>
               </Link>{" "}
               <i
+                title={isLiked ? "Remove from Favourites" : "Add to Favourites"}
                 className={isLiked ? "bi bi-heart-fill" : "bi bi-heart"}
                 onClick={onLikeUnlike}
               />
