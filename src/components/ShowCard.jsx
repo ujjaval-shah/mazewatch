@@ -5,8 +5,13 @@ import { Link } from "react-router";
 
 const SubHeading = ({ data }) => {
   const network = data.network ? data.network.name : data.webChannel.name;
-  const start = data.premiered.slice(0, 4);
-  const end = data.status === "Ended" ? data.ended.slice(0, 4) : "Now";
+  const start = data.premiered ? data.premiered.slice(0, 4) : "";
+  const end =
+    data.status === "Ended"
+      ? data.ended
+        ? data.ended.slice(0, 4)
+        : ""
+      : "Now";
 
   return <>{`(${network}, ${start}-${end})`}</>;
 };
