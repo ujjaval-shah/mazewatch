@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 
 const Favourites = () => {
   return (
@@ -8,13 +8,9 @@ const Favourites = () => {
       </div>
 
       <div className="mt-4 text-center">
-        <NavLink to="/favourites/shows" end>
-          Favourite Shows
-        </NavLink>
+        <Link to="/favourites/shows">Favourite Shows</Link>
         <br />
-        <NavLink to="/favourites/episodes" end>
-          Favourite Episodes
-        </NavLink>
+        <Link to="/favourites/episodes">Favourite Episodes</Link>
       </div>
     </>
   );

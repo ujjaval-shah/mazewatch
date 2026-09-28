@@ -9,6 +9,7 @@ import FavouriteEpisodes from "./pages/FavouriteEpisodes";
 import { ShowProvider } from "./contexts/ShowContext";
 import Show from "./pages/Show";
 import Header from "./components/Header";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
               <Route path="episodes" element={<FavouriteEpisodes />} />
             </Route>
             <Route path="about" element={<About />} />
+
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
       </ShowProvider>
