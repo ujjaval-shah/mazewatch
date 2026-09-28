@@ -7,6 +7,12 @@
   margin-right: auto;
 }
 
+.page-header {
+  font-family: "Kanit", sans-serif;
+  font-size: xx-large;
+  color: white;
+}
+
 #navbarNav {
   font-size: larger;
   font-family: "Kanit", sans-serif;

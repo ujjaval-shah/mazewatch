@@ -8,11 +8,13 @@ import FavouriteShows from "./pages/FavouriteShows";
 import FavouriteEpisodes from "./pages/FavouriteEpisodes";
 import { ShowProvider } from "./contexts/ShowContext";
 import Show from "./pages/Show";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
       <ShowProvider>
+        <Header />
         <NavBar />
         <div className="container-800">
           <Routes>
