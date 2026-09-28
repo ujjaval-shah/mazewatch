@@ -1,6 +1,7 @@
 import defaultEpisodeImg from "../assets/default-episode-image.png";
 import DOMPurify from "dompurify";
 import { useShowContext } from "../contexts/ShowContext";
+import { Link } from "react-router";
 
 const EpisodeCard = ({ episodeData, nameLargeFonts, displayShowDetails }) => {
   const { isALikedEpisode, likeAnEpisode, unlikeAnEpisode } = useShowContext();
@@ -17,6 +18,9 @@ const EpisodeCard = ({ episodeData, nameLargeFonts, displayShowDetails }) => {
     name = "Insignificant Special";
   if (!/^episode \d+$/i.test(episodeData.name))
     name = `${name}: ${episodeData.name}`;
+
+  const showId = episodeData._links.show.href.split("/").at(-1);
+  const showName = episodeData._links.show.name;
 
   return (
     <div className="card p-2 mb-3 text-bg-light">
@@ -49,7 +53,10 @@ const EpisodeCard = ({ episodeData, nameLargeFonts, displayShowDetails }) => {
 
           {displayShowDetails && (
             <>
-              <strong>Show:</strong> {episodeData._links.show.name}
+              <strong>Show:</strong>{" "}
+              <Link to={`/show/${showId}`} className="text-reset">
+                {showName}
+              </Link>
               {" | "}
               <strong>Season:</strong> {`Season ${episodeData.season}`}
               <br />
