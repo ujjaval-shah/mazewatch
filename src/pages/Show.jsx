@@ -43,10 +43,16 @@ const Show = () => {
     else likeAShow(showData);
   };
 
-  const start = showData ? showData.premiered.slice(0, 4) : "";
+  const start = showData
+    ? showData.premiered
+      ? showData.premiered.slice(0, 4)
+      : ""
+    : "";
   const end = showData
     ? showData.status === "Ended"
-      ? showData.ended.slice(0, 4)
+      ? showData.ended
+        ? showData.ended.slice(0, 4)
+        : ""
       : "Now"
     : "";
 
