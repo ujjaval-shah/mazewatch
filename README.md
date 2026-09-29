@@ -8,6 +8,8 @@ browser using LocalStorage; no account or login required.
 
 ### Web App Link
 
+[https://mazewatch.vercel.app/](https://mazewatch.vercel.app/)
+
 ### Install project dependencies
 
 ```bash
