@@ -9,7 +9,7 @@ const PageNotFound = () => {
 
       <div className="mt-4 text-center">
         <span style={{ fontSize: "xxx-large" }}>
-          <i class="bi bi-exclamation-triangle-fill"></i>
+          <i className="bi bi-exclamation-triangle-fill"></i>
         </span>
         <br />
         <br />
