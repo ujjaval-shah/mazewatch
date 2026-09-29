@@ -41,6 +41,11 @@
   width: auto;
 }
 
+.episode-img {
+  max-width: 250px;
+  height: auto;
+}
+
 .card .show-name {
   font-size: larger;
 }

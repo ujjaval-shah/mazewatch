@@ -10,6 +10,7 @@ import { ShowProvider } from "./contexts/ShowContext";
 import Show from "./pages/Show";
 import Header from "./components/Header";
 import PageNotFound from "./pages/PageNotFound";
+import Episode from "./pages/Episode";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="show/:id" element={<Show />} />
+            <Route path="episode/:id" element={<Episode />} />
             <Route path="favourites">
               <Route index element={<Favourites />} />
               <Route path="shows" element={<FavouriteShows />} />

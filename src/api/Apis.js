@@ -36,3 +36,17 @@ export const get_season_episodes = async (season_id) => {
     .then((response) => [true, response.data])
     .catch((err) => [false, console.log(err)]);
 };
+
+export const get_episode = async (episode_id) => {
+  return await axios
+    .get(`${base_url}episodes/${episode_id}`)
+    .then((response) => [true, response.data])
+    .catch((err) => [false, console.log(err)]);
+};
+
+export const get_episode_guestcast = async (episode_id) => {
+  return await axios
+    .get(`${base_url}episodes/${episode_id}/guestcast`)
+    .then((response) => [true, response.data])
+    .catch((err) => [false, console.log(err)]);
+};

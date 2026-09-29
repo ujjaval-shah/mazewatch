@@ -26,24 +26,31 @@ const EpisodeCard = ({ episodeData, nameLargeFonts, displayShowDetails }) => {
     <div className="card p-2 mb-3 text-bg-light">
       <div className="row">
         <div className="col-auto">
-          {episodeData.image ? (
-            <img
-              src={episodeData.image.medium}
-              className="episode-img"
-              alt={`${episodeData.name} poster`}
-            />
-          ) : (
-            <img
-              src={defaultEpisodeImg}
-              className="episode-img"
-              alt={`${episodeData.name} poster`}
-            />
-          )}
+          <Link to={`/episode/${episodeData.id}`}>
+            {episodeData.image ? (
+              <img
+                src={episodeData.image.medium}
+                className="episode-img"
+                alt={`${episodeData.name} poster`}
+              />
+            ) : (
+              <img
+                src={defaultEpisodeImg}
+                className="episode-img"
+                alt={`${episodeData.name} poster`}
+              />
+            )}
+          </Link>
         </div>
 
         <div className="col">
           <span className={nameLargeFonts ? "episode-name" : ""}>
-            <strong>{name}</strong>{" "}
+            <Link
+              to={`/episode/${episodeData.id}`}
+              className="text-decoration-none text-reset"
+            >
+              <strong>{name}</strong>
+            </Link>{" "}
             <i
               title={isLiked ? "Remove from Favourites" : "Add to Favourites"}
               className={isLiked ? "bi bi-heart-fill" : "bi bi-heart"}
