@@ -41,7 +41,7 @@ const Home = () => {
             id="searchbox"
           />
         </div>
-        <div className="col-sm-auto">
+        <div className="col-auto">
           <button className="btn btn-primary" onClick={onSearch}>
             Search
           </button>
